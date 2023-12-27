@@ -7,7 +7,303 @@
         <!-- base avcorn meta -->
         {% include "components/head.html" %}
 
-        <!-- Layout Styles/Scripts Here -->
+        <style>
+body {
+    font-family: Montserrat, sans-serif;
+}
+
+.topbar-responsive {
+  background: #000;
+  padding: 0 1.5rem;
+  font-size: 1.3em;
+}
+
+.topbar-responsive .top-bar-title {
+    margin: 0;
+}
+
+.topbar-responsive .topbar-responsive-logo {
+  color: #fefefe;
+  vertical-align: middle;
+}
+
+.topbar-responsive .menu {
+  background: #000;
+}
+
+.topbar-responsive .menu li:last-of-type {
+  margin-right: 0;
+}
+
+.topbar-responsive .menu a {
+  color: #fefefe;
+  transition: color 0.15s ease-in;
+}
+
+.topbar-responsive .menu a:hover {
+  color: #c6d1d8;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .topbar-responsive .menu a {
+    padding: 0.875rem 0;
+  }
+}
+
+.topbar-responsive .menu .topbar-responsive-button {
+  color: #fefefe;
+  background: #cb2027;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  transition: color 0.15s ease-in, border-color 0.15s ease-in;
+  margin: 0 4em;
+}
+
+.topbar-responsive .menu .topbar-responsive-button:hover {
+  color: #c6d1d8;
+  border-color: #c6d1d8;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .topbar-responsive .menu .topbar-responsive-button {
+    width: 100%;
+    margin: 0.875rem 0;
+  }
+}
+
+@media screen and (max-width: 39.9375em) {
+  .topbar-responsive {
+    padding: 0.75rem;
+  }
+  .topbar-responsive .top-bar-title {
+    position: relative;
+    width: 100%;
+  }
+  .topbar-responsive .top-bar-title span {
+    position: absolute;
+    right: 0;
+    border: 1px solid #fefefe;
+    border-radius: 5px;
+    padding: 0.25rem 0.45rem 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .topbar-responsive .top-bar-title span .menu-icon {
+    margin-bottom: 0;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@media screen and (max-width: 39.9375em) {
+  .topbar-responsive-links {
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    width: 100%;
+    -webkit-animation: fadeIn 1s ease-in;
+            animation: fadeIn 1s ease-in;
+  }
+}
+
+
+
+            .sticky-social-bar {
+            padding: 0;
+            margin: 0;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            width: 11.25rem;
+            background-color: #333333;
+            position: fixed;
+            left: -8.75rem;
+            }
+
+            .sticky-social-bar .social-item {
+            list-style-type: none;
+            color: #fefefe;
+            background-color: inherit;
+            margin: 0;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: 0.25rem 0.25rem 0.5rem;
+            }
+
+            .sticky-social-bar .social-item:first-of-type {
+            padding-top: 0.375rem;
+            }
+
+            .sticky-social-bar .social-item:last-of-type {
+            padding-bottom: 0.625rem;
+            }
+
+            .sticky-social-bar .social-item > a {
+            color: inherit;
+            background-color: inherit;
+            }
+
+            .sticky-social-bar .social-item > a > .fa {
+            padding: 0.5rem;
+            width: 2rem;
+            height: 2rem;
+            float: right;
+            margin-left: 0.5rem;
+            }
+
+            .sticky-social-bar .social-item > a > .fa.fa-facebook {
+            background-color: #3b5998;
+            }
+
+            .sticky-social-bar .social-item > a > .fa.fa-twitter {
+            background-color: #55acee;
+            }
+
+            .sticky-social-bar .social-item > a > .fa.fa-linkedin {
+            background-color: #007bb5;
+            }
+
+            .sticky-social-bar .social-item > a > .fa.fa-youtube {
+            background-color: #bb0000;
+            }
+
+            .sticky-social-bar .social-item > a > .fa.fa-instagram {
+            background-color: #125688;
+            }
+
+            .sticky-social-bar .social-item > a > .fa.fa-pinterest-p {
+            background-color: #cb2027;
+            }
+
+            .sticky-social-bar .social-item > a > .social-icon-text {
+            font-size: 80%;
+            color: #fefefe;
+            text-transform: uppercase;
+            margin-right: 0.5rem;
+            visibility: visible;
+            display: inline-block !important;
+            }
+
+            .sticky-social-bar .social-item:hover {
+            -webkit-transform: translateX(8.75rem);
+            -ms-transform: translateX(8.75rem);
+            transform: translateX(8.75rem);
+            }
+
+            .sticky-social-bar .social-item:hover > a {
+            color: inherit;
+            background-color: inherit;
+            }
+
+            .bottom {
+                background: #000;
+                color: #fff;
+                padding: 4em 2em 0;
+            }
+
+            .bottom .bottom-logo {
+                text-align: center;
+            }
+
+            .bottom .bottom-logo .bottom-company {
+                font-size: 1.5em;
+                font-weight: bold;
+                text-align: center;
+                text-transform: uppercase;
+                margin-top: 0.1em;
+                margin-bottom: 0;
+                padding-bottom: 0;
+                line-height: 0.9em;
+            }
+
+            .bottom .bottom-logo .bottom-agency {
+                color:aquamarine;
+                font-size: 0.8em;
+                font-weight: bold;
+                letter-spacing: 0.5em;
+                text-transform: uppercase;
+                margin: 0;
+                margin-top: 0.2em;
+                padding: 0;
+                line-height: 0.9em;
+            }
+
+            .bottom .bottom-logo .navigation-title {
+                font-size: 1.2em;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            .bottom .copyright {
+                font-size: 0.9em;
+                text-align: center;
+                margin-bottom: 3em;
+            }
+
+            .bottom .bottom-navigation .navigation-item {
+                width: 50%;
+            }
+
+            .bottom .bottom-navigation .navigation-link {
+                color: #fff;
+                font-weight: bold;
+            }
+
+            .bottom .bottom-navigation .navigation-link::before {
+                content: ">";
+                font-size: 0.7em;
+            }
+
+            .bottom .bottom-content {
+                font-size: 1.5em;
+                text-align: center;
+                padding: 2em 1em 0;
+            }
+        </style>
 
         <!-- use these as overrides for each individual page -->
         {% block styles %}{% endblock %}
@@ -18,64 +314,90 @@
         <!-- admin functionality injection (hidden) -->
         {% include "components/admin.html" %}
 
-        <header>
-            <div class="top-bar">
-                <!-- company logo -->
-                <div class="logo">
-                    <a href="/">
-                        <img src="{{ info.logo }}" alt="{{ info.company }}" />
+        <header class="top">
+            <nav class="top-bar topbar-responsive">
+                <div class="top-bar-title">
+                    <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
+                        <button class="menu-icon" type="button" data-toggle></button>
+                    </span>
+                    <a class="topbar-responsive-logo" href="/">
+                        <strong>
+                            <img class="logo-img shake" src="{{ info.logo }}" title="{{ info.company }}" alt="{{ info.company }}" />
+                        </strong>
                     </a>
                 </div>
+                <div id="topbar-responsive" class="topbar-responsive-links">
+                    <div class="top-bar-right">
+                        <ul class="menu simple vertical medium-horizontal">
+                            {% set activeflag = 'false' %}
+                            {% include "components/navigation.html" %}
+                            <li>
+                                <a href="/contact" class="button topbar-responsive-button">
+                                    Book a Call
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
 
-                <!-- basic navigation -->
-                <nav>
-                    <ul class="menu">
-                        {% include "components/navigation.html" %}
-                    </ul>
-                </nav>
+            <div class="top-content">
+                <!-- content title overridden by each page -->
+                {% block header %}
+                    <h1 class="editable">
+                        {{ info.title }}
+                    </h1>
+                {% endblock %}
             </div>
-
-            <!-- content title overridden by each page -->
-            {% block header %}
-                <h1 class="editable">
-                    {{ info.title }}
-                </h1>
-            {% endblock %}
         </header>
 
-        <article>
+        <article class="main">
             <!-- content overridden by each page -->
             {% block content %}
-                <div class="editable"></div>
+                <div class="main-content editable"></div>
             {% endblock %}
         </article>
 
-        <!-- a contact form -->
-        <div clas="contact">
-            {% include "components/contact.html" %}
-        </div>
+        <!-- social icons -->
+        <ul class="sticky-social-bar">
+            {% include "components/social.html" %}
+        </ul>
 
-        <footer>
-            <!-- footer overridden by each page -->
-            {% block footer %}
-                <div class="editable"></div>
-            {% endblock %}
+        <footer class="bottom">
+            <div class="row">
+                <div class="columns small-12 medium-6 large-3">
+                    <div class="bottom-logo">
+                        <img class="logo-img shake" src="{{ info.logo }}" title="{{ info.company }}" alt="{{ info.company }}" />
+                        <div class="bottom-company">{{ info.company }}</div>
+                        <div class="bottom-agency">Agency</div>
+                    </div>
 
-            <!-- social icons -->
-            <ul class="social">
-                {% include "components/social.html" %}
-            </ul>
+                    <br />
 
-            <!-- basic navigation -->
-            <nav>
-                <ul class="menu">
-                    {% include "components/navigation.html" %}
-                </ul>
-            </nav>
+                    <div class="copyright">
+                        &copy; {{ info.copyright }} {{ info.company }} Agency
+                    </div>
+                </div>
 
-            <!-- copyright info -->
-            <div class="copy">
-                &copy; {{ info.copyright }} {{ "now"|date("Y") }} - {{ info.legal }}
+                <div class="columns small-12 medium-6 large-4">
+                    <h3 class="navigation-title">Links</h3>
+                    <nav class="bottom-navigation">
+                        <ul class="menu">
+                            {% include "components/navigation.html" %}
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="columns small-12 large-5">
+                    {% block footer %}
+                        <div class="bottom-content editable">
+                            <p>
+                                {{ info.motto }}
+                            </p>
+                        </div>
+                    {% endblock %}
+                </div>
+            </div>
         </footer>
     </body>
 </html>

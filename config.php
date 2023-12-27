@@ -25,3 +25,4 @@ $config['info']['company'] = 'Oak Insurance';
 $config['info']['title'] = 'All Your Insurance "Needs"';
 $config['info']['motto'] = 'It would be wise to get some "insurance".';
 $config['info']['slogan'] = 'GET SOME INSURANCE!!!';
+$config['info']['logo'] = '/assets/images/logos/logo-insurance.png';
