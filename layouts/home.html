@@ -141,6 +141,20 @@
             padding: 4em 8em 4em 32em;
         }
 
+        @media screen and (max-width: 60em) {
+            .top-content .top-content-inside {
+                background-size: 30%;
+                padding: 4em 8em 4em 16em;
+            }
+        }
+
+        @media screen and (max-width: 39.9375em) {
+            .top-content .top-content-inside {
+                background-image: none;
+                padding: 4em 2em;
+            }
+        }
+
         .top-content h1 {
             font-family: 'Times New Roman', Times, serif;
             font-size: 2.5em;
@@ -173,10 +187,22 @@
         .lower-content {
             background: #1e1e1e;
             background-image: url('/assets/images/nutty/nutty.png');
-            background-position: top left;
+            background-position: left;
             background-size: 50%;
             background-repeat: no-repeat;
             color: #eee;
+        }
+
+        @media screen and (max-width: 60em) {
+            .lower-content {
+                background-size: 30%;
+            }
+        }
+
+        @media screen and (max-width: 39.9375em) {
+            .lower-content {
+                background-image: none;
+            }
         }
 
         .lower-content .left {
