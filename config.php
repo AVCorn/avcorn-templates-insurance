@@ -22,7 +22,10 @@ declare(strict_types=1);
  * @var array $config Configuration
  */
 $config['info']['company'] = 'Oak Insurance';
-$config['info']['title'] = 'All Your Insurance "Needs"';
-$config['info']['motto'] = 'It would be wise to get some "insurance".';
-$config['info']['slogan'] = 'GET SOME INSURANCE!!!';
-$config['info']['logo'] = '/assets/images/logos/logo-insurance.png';
+$config['info']['title']   = 'All Your Insurance "Needs"';
+$config['info']['motto']   = 'It would be wise to get some "insurance".';
+$config['info']['slogan']  = 'GET SOME INSURANCE!!!';
+$config['info']['logo']    = '/assets/images/logos/logo-insurance.png';
+$config['home']            = '/home/insurance';
+
+$config['navigation'][0]['href'] = $config['home'];
